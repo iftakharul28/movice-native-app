@@ -20,9 +20,9 @@ export default function MoviceCard(props: moviceCardProps) {
       }>
       <Image
         style={{
-          resizeMode: 'cover',
+          resizeMode: 'stretch',
           width: '100%',
-          height: 350,
+          height: 280,
         }}
         source={{ uri: props.Poster }}
       />

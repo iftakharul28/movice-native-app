@@ -7,6 +7,7 @@ import AboutScreen from './screen/AboutScreen';
 import MoviceScreen from './screen/MoviceScreen';
 import Header from './components/Header';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
+import { StatusBar } from 'expo-status-bar';
 type RootStackParamList = {
   Home: undefined;
   About: undefined;
@@ -20,6 +21,7 @@ export default function App() {
     <QueryClientProvider client={queryClient}>
       <SafeAreaProvider>
         <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+          <StatusBar style='light' />
           <NavigationContainer>
             <Stack.Navigator initialRouteName='Home'>
               <Stack.Screen
